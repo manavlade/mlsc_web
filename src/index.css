@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Poppins:wght@300;400;600;700&display=swap');
+
+
+/* UTIL CSS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgb(16, 15, 15), rgb(37, 37, 37));
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* NAVBAR */
+
+#navbar {
+    padding: 1.5rem 2em;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: rgb(255, 255, 255);
+}
+
+.logo span {
+    color: rgb(35, 65, 240);
+}
+
+.menu {
+    display: flex;
+    gap: 4rem;
+    color: rgb(255, 255, 255)
+}
+
+#navbar li a:hover {
+    color: rgb(2, 162, 255);
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+/* HOME */
+
+.bg {
+    width: 100vw;
+    height: 99.9vh;
+    background-size: cover;
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    color: rgb(255, 255, 255);
+}
+
+.hero-title h1 {
+    font-size: 80px;
+    width: 100%;
+}
+
+h1>span {
+    color: rgb(35, 65, 240);
+}
+
+.hero-title p {
+    font-size: 25px;
+}
+
+.btn {
+    border-radius: 2rem;
+    border: none;
+    padding: .8em 3em;
+    background-color: rgb(252, 252, 252);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: large;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(35, 65, 240);
+    color: rgb(255, 255, 255);
+}
+
+/* COMPONENTS */
+
+.about {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10em;
+}
+
+.about p{
+    text-align: left;
+    margin-top: 5rem;
+    width: 50%;
+}
+
+.team {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10em;
+}
+
+.events {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10em;
+}
+
+.leaderboard {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10em;
+}
