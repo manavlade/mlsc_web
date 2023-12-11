@@ -28,7 +28,10 @@ const Home = () => {
             <h1>MLSC <span>VCET</span></h1>
             <p>For the love of coding and innovation</p>
           </div>
-          <div className='btn-container'><Link to="/about" className='btn'>About us<span></span></Link></div>
+          <div className='btn-container'>
+            <Link to="/about" className='btn'>About us<span>↗</span></Link>
+            {/* <div className='btn_arrow'>↗</div> */}
+          </div>
         </div>
       </div>
     </section>
