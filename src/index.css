@@ -13,8 +13,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(rgb(16, 15, 15), rgb(37, 37, 37));
     background-repeat: no-repeat;
-    height: 100vh;
-    /* overflow: hidden; */
+    height: 100%;
 }
 
 a {
@@ -31,11 +30,11 @@ ul {
 /* NAVBAR */
 
 #navbar {
-    padding: 1.5rem 2em;
-    width: 100%;
     position: fixed;
     top: 0;
     z-index: 10;
+    width: 100%;
+    padding: 1.5rem 2em;
 }
 
 .nav-wrapper {
@@ -66,10 +65,18 @@ ul {
 
 /* HOME */
 
+.home{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .bg {
-    width: 100vw;
-    height: 99.9vh;
+    width: 100%;
+    height: 100vh;
     background-size: cover;
+    background-position: center;
 }
 
 .hero-container{
