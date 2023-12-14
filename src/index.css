@@ -150,6 +150,8 @@ h1>span {
     align-items: center;
 }
 
+
+
 .about-content p {
     color: white;
     width: 40%;
@@ -205,3 +207,4 @@ h1>span {
         transform: scaleY(0);
     }
 } */
+

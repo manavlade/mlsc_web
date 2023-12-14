@@ -1,5 +1,3 @@
-// import underWorkImg from '../assets/underwork.png'
-
 const Leaderboard = () => {
   return (
     <div className="leaderboard-section">

@@ -30,7 +30,6 @@ const Home = () => {
           </div>
           <div className='btn-container'>
             <Link to="/about" className='btn'>About us<span>↗</span></Link>
-            {/* <div className='btn_arrow'>↗</div> */}
           </div>
         </div>
       </div>
