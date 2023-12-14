@@ -13,7 +13,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(rgb(16, 15, 15), rgb(37, 37, 37));
     background-repeat: no-repeat;
-    height: 100%;
+    height: 100vh;
 }
 
 a {
@@ -24,6 +24,14 @@ a {
 
 ul {
     list-style: none;
+}
+
+.title {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 2.5em;
+    font-weight: 400;
+    font-size: 50px;
 }
 
 
@@ -65,7 +73,7 @@ ul {
 
 /* HOME */
 
-.home{
+.home {
     position: relative;
     width: 100%;
     height: 100%;
@@ -79,7 +87,7 @@ ul {
     background-position: center;
 }
 
-.hero-container{
+.hero-container {
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -89,9 +97,10 @@ ul {
 }
 
 .hero-title h1 {
-    font-size: 80px;
+    font-size: 100px;
     width: 100%;
     color: rgb(255, 255, 255);
+    line-height: 1;
     /* background-image: linear-gradient(43deg, rgb(13, 7, 224) 0% , rgb(4, 222, 237) 40%,);
     -webkit-background-clip: text;
     color: transparent; */
@@ -106,7 +115,7 @@ h1>span {
     color: rgb(255, 255, 255);
 }
 
-.btn-container{
+.btn-container {
     display: flex;
 }
 
@@ -127,25 +136,34 @@ h1>span {
     color: rgb(255, 255, 255);
 }
 
-.btn span{
+.btn span {
     margin-left: 0.4rem;
     font-size: 20px;
     font-weight: 900;
 }
 
+/* ABOUT*/
+
+.flex-center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-content p {
+    color: white;
+    width: 40%;
+    /* text-align: center; */
+    /* font-size:medium */
+}
+
+.aboutImg {
+    width: 40%;
+    height: 30%;
+}
+
+
 /* COMPONENTS */
-
-.about {
-    text-align: center;
-    color: rgb(255, 255, 255);
-    padding: 10em;
-}
-
-.about p{
-    text-align: left;
-    margin-top: 5rem;
-    width: 50%;
-}
 
 .team {
     text-align: center;
@@ -164,3 +182,26 @@ h1>span {
     color: rgb(255, 255, 255);
     padding: 10em;
 }
+
+
+/* .preloader{
+    width:100vw;
+    height: 100vh;
+    z-index: 1000;
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    animation: preloader 1s forwards;
+}
+
+@keyframes preloader {
+    to{
+        transform: scaleY(0);
+    }
+} */

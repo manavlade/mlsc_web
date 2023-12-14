@@ -8,6 +8,9 @@ const Root = () => {
         <>
             <Navbar />
             <Outlet />
+            {/* <div className="preloader">
+                MLSC
+            </div> */}
         </>
     );
 };

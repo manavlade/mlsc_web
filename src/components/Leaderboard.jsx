@@ -1,7 +1,12 @@
+// import underWorkImg from '../assets/underwork.png'
+
 const Leaderboard = () => {
   return (
-    <div className="leaderboard">
-      <h1>Leaderboard</h1>
+    <div className="leaderboard-section">
+      <h1 className="title">Leaderboard</h1>
+      <div>
+        {/* <img src={} /> */}
+      </div>
     </div>
   )
 }
