@@ -12,7 +12,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-repeat: no-repeat;
-    background-color: grey;
+    background-color: rgb(0, 0, 0);
     height: 100vh;
 }
 
