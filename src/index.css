@@ -11,8 +11,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(rgb(16, 15, 15), rgb(37, 37, 37));
     background-repeat: no-repeat;
+    background-color: grey;
     height: 100vh;
 }
 
@@ -36,6 +36,7 @@ ul {
     padding-top: 2.5em;
     font-weight: 400;
     font-size: 50px;
+    animation: drop-in 1s ease 200ms backwards;
 }
 
 .flex-center {
@@ -47,17 +48,21 @@ ul {
 
 /* NAVBAR */
 
-#navbar {
+.navbar {
     position: fixed;
     top: 0;
     z-index: 10;
     width: 100%;
     padding: 1.5rem 2em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-bg {
+    background-color: rgba(87, 89, 90, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 .nav-wrapper {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -69,21 +74,42 @@ ul {
     color: rgb(35, 65, 240);
 }
 
-.menu {
+.nav-link_container {
     display: flex;
     gap: 4rem;
     color: rgb(255, 255, 255)
 }
 
-#navbar li a:hover {
+.nav-link {
+    position: relative;
+}
+
+.nav-link a:hover {
     color: rgb(2, 162, 255);
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
 }
 
+.nav-link::before {
+    transition: 300ms;
+    height: 1.5px;
+    content: "";
+    position: absolute;
+    background-color: rgb(2, 162, 255);
+}
+
+.nav-link-ltr::before {
+    width: 0%;
+    bottom: -5px;
+}
+
+.nav-link-ltr:hover::before {
+    width: 100%;
+}
+
 /* HOME */
 
-.home {
+.home-container {
     position: relative;
     width: 100%;
     height: 100%;
@@ -97,7 +123,7 @@ ul {
     background-position: center;
 }
 
-.hero-container {
+.home-content {
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -154,17 +180,23 @@ h1>span {
 
 /* ABOUT*/
 
+.about-section {
+    background-color: rgb(13, 13, 68);
+    color: rgb(0, 0, 0);
+}
+
+.about-content {
+    animation: drop-in 1200ms ease 500ms backwards;
+    padding-bottom: 9rem;
+}
+
 .about-content p {
-    /* color: white; */
+    color: rgb(255, 255, 255);
     margin-top: 2rem;
-    color: black;
     font-weight: 600;
     text-align: justify;
     font-size: 20px;
     width: 50%;
-    background-color: white;
-    border-radius: 20px;
-    padding: 2em;
 }
 
 .aboutImg {
@@ -172,6 +204,17 @@ h1>span {
     height: 30%;
 }
 
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
 
 /* TEAM*/
 
@@ -199,96 +242,48 @@ h1>span {
 
 
 /* FOOTER */
-
-.section__padding {
-    padding: 4rem;
-}
-
-.footer {
-    background-color: #2d2d32;
-}
-
-.sb__footer {
-    display: flex;
-    flex-direction: column;
-}
-
-.sb__footer-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 2rem;
-}
-
-.sb__footer-links_div {
-    width: 150px;
-    margin: 1rem;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+.footer-section {
+    padding: 4em 4em 1em;
+    background-color: rgba(0, 0, 0, 0.95);
     color: white;
 }
 
-.sb__footer-links_div a {
-    color: rgb(175, 175, 179);
+.footer-content {
+    justify-content: space-between;
+    padding-bottom: 3em;
+}
+
+.footer-logo img {
+    width: 11.5rem;
+    height: 10rem;
 }
 
 .socialmedia {
-    display: flex;
-    flex-direction: row;
+    gap: 1.5rem;
 }
 
-.socialmedia img {
-    width: 80%;
+.social-icon {
+    font-size: x-large;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
-.sb__footer-links_div h4 {
-    font-size: 14px;
-    line-height: 15px;
-    margin-bottom: .9rem;
-    cursor: pointer;
+.social-icon:hover {
+    color: blue;
 }
 
-.sb__footer-below {
-    display: flex;
-    flex-direction: row;
+.footer-copyright {
+    margin-top: 1rem;
     justify-content: space-between;
-    margin-top: .2rem;
 }
 
-.sb__footer-below-links {
-    display: flex;
-    flex-direction: row;
-}
-
-.sb__footer-below-links p {
-    font-size: 13px;
-    line-height: 15px;
-    margin-left: 2rem;
-    color: white;
+.footer-copyright p {
     font-weight: 600;
 }
-
-hr {
-    color: white !important;
-    width: 100%;
-}
-
-.sb__footer-copyright p {
-    font-size: 13px;
-    line-height: 15px;
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-}
-
 
 /* MEDIA_QUERY */
 
-@media screen and (max-width: 850px) {
+/* @media screen and (max-width: 850px) {
     .sb__footer-heading h1 {
         font-size: 44px;
         line-height: 50px;
@@ -330,7 +325,7 @@ hr {
         font-size: 27px;
         line-height: 38px;
     }
-}
+} */
 
 /* PRELOADER */
 

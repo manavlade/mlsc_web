@@ -1,4 +1,4 @@
-// import Footer from "./Footer"
+import Footer from "./Footer"
 import aboutImg from '../assets/about.webp'
 
 const About = () => {
@@ -13,7 +13,7 @@ const About = () => {
           <img src={aboutImg} alt='aboutImg' className='aboutImg' />
         </div>
       </section>
-      {/* <Footer/> */}
+      <Footer />
     </>
   )
 }

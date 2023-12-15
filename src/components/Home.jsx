@@ -20,10 +20,10 @@ const Home = () => {
   })
 
   return (
-    <section className='hero-section'>
-      <div className='home'>
+    <>
+      <div className='home-container'>
         <div className='bg' id='vanta'></div>
-        <div className='hero-container'>
+        <div className='home-content'>
           <div className='hero-title'>
             <h1>MLSC <span>VCET</span></h1>
             <p>For the love of coding and innovation</p>
@@ -33,7 +33,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   )
 
 }
