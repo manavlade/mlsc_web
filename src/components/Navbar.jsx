@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import mlscLogo from '../assets/mlsclogo.png'
 
 const Navbar = () => {
 
@@ -18,7 +19,8 @@ const Navbar = () => {
     <div>
       <nav className={color ? 'navbar navbar-bg' : 'navbar'}>
         <div className='flex-center | nav-wrapper'>
-          <div className='logo'>
+          <div className='flex-center | logo'>
+            <img src={mlscLogo} className='mlsc_logo'></img>
             <h3>MLSC<span>VCET</span></h3>
           </div>
           <ul className='nav-link_container'>
