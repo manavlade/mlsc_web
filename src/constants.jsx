@@ -1,5 +1,4 @@
 import About from "./components/About";
-// import Contact from "./components/Contact";
 import Events from "./components/Events";
 import Home from "./components/Home";
 import Leaderboard from "./components/Leaderboard";
@@ -14,10 +13,6 @@ export const routes = [
         path: '/about',
         element: <About/>,
     },
-    // {
-    //     path: '/contact',
-    //     element: <Contact/>,
-    // },
     {
         path: '/team',
         element: <Team/>,
