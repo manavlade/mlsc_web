@@ -388,3 +388,92 @@ h1>span {
 
 
 /*  */
+
+.headline {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.text {
+    margin-top: 0.8em;
+}
+
+.text>p {
+    color: white;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 50%;
+}
+
+.detailsWrapper {
+    margin: auto;
+    width: 80%;
+}
+
+.details {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.right {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.photos {
+    width: 40vw;
+    height: 35vw;
+    position: relative;
+    margin: auto;
+}
+
+.photo {
+    position: absolute;
+}
+
+.photo>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.proj_btn {
+    margin-top: 1rem;
+    border-radius: 2rem;
+    border: none;
+    padding: .5em 2em;
+    width: fit-content;
+    background-color: blue;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.proj_btn span{
+    margin: 0 0 .2rem .3rem;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.proj_btn:hover{
+    cursor: pointer;
+    background-color: black;
+}
