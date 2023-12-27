@@ -12,7 +12,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-repeat: no-repeat;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(13, 13, 68);
     height: 100vh;
 }
 
@@ -238,10 +238,66 @@ h1>span {
 
 /* EVENTS */
 
-.events {
+.event_section {
+    padding: 0 5em;
+}
+
+.event_container {
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.event_content {
+    background-color: rgb(233, 248, 255);
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 2em;
+    margin: auto;
+    margin-bottom: 4rem;
+    gap: 5rem;
+}
+
+.eventImg {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 10px;
+}
+
+.event_right-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.event_right-content > h2 {
     text-align: center;
+    font-size: 35px;
+}
+
+.event_right-content > p {
+    text-align: justify;
+    font-weight: 600;
+    font-size: large;
+}
+
+.event_right-content .event_btn {
+    background-color: rgb(0, 0, 255);
+    border: none;
+    padding: 1em 1.5em;
+    margin: auto;
     color: rgb(255, 255, 255);
-    padding: 10em;
+    font-weight: 600;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+/* PROJECT */
+
+.project_section {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 40px;
+    margin-top: 2rem;
 }
 
 /* LEADERBOARD */
@@ -329,3 +385,6 @@ h1>span {
     background-color: rgba(35, 65, 240, 1);
     border-radius: 6px;
 }
+
+
+/*  */
