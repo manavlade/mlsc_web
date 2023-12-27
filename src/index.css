@@ -269,12 +269,12 @@ h1>span {
     gap: 3rem;
 }
 
-.event_right-content > h2 {
+.event_right-content>h2 {
     text-align: center;
     font-size: 35px;
 }
 
-.event_right-content > p {
+.event_right-content>p {
     text-align: justify;
     font-weight: 600;
     font-size: large;
@@ -286,19 +286,19 @@ h1>span {
     padding: 1em 1.5em;
     margin: auto;
     color: rgb(255, 255, 255);
-    font-weight: 600;
-    border-radius: 20px;
+    font-weight: 500;
+    border-radius: 2rem;
     font-size: 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.event_btn:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
 }
 
 /* PROJECT */
-
-.project_section {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 40px;
-    margin-top: 2rem;
-}
 
 /* LEADERBOARD */
 
