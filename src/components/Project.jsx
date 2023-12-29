@@ -1,24 +1,7 @@
 import gsap from "gsap";
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/all";
-import dummyImg from "../assets/azurechallenge.jpeg";
-import dummyImg2 from "../assets/reactjsworkshop.jpeg";
-import dummyImg3 from "../assets/azurechallenge.jpeg";
-
-const projectDetails = [
-    {
-        title: "Project 1",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto velit odio eligendi repellendus veritatis, ex excepturi quod sint ratione deleniti asperiores iure minus fuga sed, eos facilis esse delectus ipsam!",
-    },
-    {
-        title: "Project 2",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto velit odio eligendi repellendus veritatis, ex excepturi quod sint ratione deleniti asperiores iure minus fuga sed, eos facilis esse delectus ipsam!",
-    },
-    {
-        title: "Project 3",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto velit odio eligendi repellendus veritatis, ex excepturi quod sint ratione deleniti asperiores iure minus fuga sed, eos facilis esse delectus ipsam!",
-    },
-];
+import { projectDetails, projectImages } from "./data";
 
 const Project = () => {
     useEffect(() => {
@@ -65,7 +48,7 @@ const Project = () => {
 
                     <div className="right">
                         <div className="photos">
-                            {[dummyImg, dummyImg2, dummyImg3].map((img, index) => (
+                            {projectImages.map((img, index) => (
                                 <div className="photo" key={index}>
                                     <img src={img} alt={`Project ${index + 1}`} />
                                 </div>
