@@ -407,7 +407,6 @@ h1>span {
 
 .gallery {
     display: flex;
-    justify-content: space-between;
 }
 
 .left {
@@ -436,14 +435,14 @@ h1>span {
 }
 
 .photos {
-    width: 40vw;
-    height: 35vw;
+    width: 80%;
+    height: 80%;
     position: relative;
     margin: auto;
 }
 
 .photo {
-    /* position: absolute; */
+    position: absolute;
 }
 
 .photo>img {
