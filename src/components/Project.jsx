@@ -1,32 +1,13 @@
-import gsap from "gsap"
-import { useEffect } from "react"
-import { ScrollTrigger } from "gsap/all"
-import dummyImg3 from "../assets/azurechallenge.jpeg"
-import dummyImg2 from "../assets/reactjsworkshop.jpeg"
 import dummyImg from "../assets/azurechallenge.jpeg"
+import dummyImg2 from "../assets/reactjsworkshop.jpeg"
+import dummyImg3 from "../assets/azurechallenge.jpeg"
+// import { useInView } from "react-intersection-observer";
 
 const Project = () => {
 
-    useEffect(() => {
-        gsap.set(".photo:not(:first-child)", { yPercent: 101 })
-
-        const animation = gsap.to(".photo:not(:first-child)", {
-            yPercent: 0, duration: 1, stagger: 1
-        })
-
-        gsap.registerPlugin(ScrollTrigger);
-
-        ScrollTrigger.create({
-            trigger: ".gallery",
-            start: "top top",
-            end: "bottom bottom",
-            pin: ".right",
-            animation: animation,
-            scrub: true
-        })
-
-
-    })
+    // const { galleryRef, inView } = useInView({
+    //     threshold: 1,
+    // })
 
     return (
         <>
@@ -80,5 +61,7 @@ const Project = () => {
             </section>
         </>
     )
-}
-export default Project
+};
+
+export default Project;
+

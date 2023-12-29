@@ -443,7 +443,7 @@ h1>span {
 }
 
 .photo {
-    position: absolute;
+    /* position: absolute; */
 }
 
 .photo>img {
@@ -467,13 +467,13 @@ h1>span {
     align-items: center;
 }
 
-.proj_btn span{
+.proj_btn span {
     margin: 0 0 .2rem .3rem;
     font-size: 18px;
     font-weight: 900;
 }
 
-.proj_btn:hover{
+.proj_btn:hover {
     cursor: pointer;
     background-color: black;
 }
