@@ -1,43 +1,66 @@
-import workshopEventImg from "../assets/reactjsworkshop.jpeg"
-import azureEventImg from "../assets/azurechallenge.jpeg"
+import { useState } from "react";
+import Modal from "./Modal";
 import Project from "./Project";
+import workshopEventImg from "../assets/reactjsworkshop.jpeg";
+import azureEventImg from "../assets/azurechallenge.jpeg";
 
 const Events = () => {
+  const [isModalOpen, setModalIsOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
+  const toggleModal = (event) => {
+    setSelectedEvent(event);
+    setModalIsOpen(!isModalOpen);
+  };
+
+  const eventsData = [
+    {
+      title: "ReactJS Workshop",
+      imgSrc: workshopEventImg,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quibusdam labore. Quod provident beatae sed voluptate, quas mollitia doloremque consequuntur obcaecati sint? Ullam rerum consectetur quam placeat, incidunt, eos inventore laboriosam corporis illo nostrum dolore provident. Corrupti eum iusto animi? Odio, dolores provident. Facere, sequi! Facere minima eos voluptatem architecto.",
+      info: [
+        { label: "Organizing People", value: 4 },
+        { label: "Organizing People", value: 4 },
+        { label: "Organizing People", value: 4 },
+        { label: "Organizing People", value: 4 },
+      ],
+    },
+    {
+      title: "Fundamentally Azure Cloud Skill Challenge",
+      imgSrc: azureEventImg,
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quibusdam labore. Quod provident beatae sed voluptate, quas mollitia doloremque consequuntur obcaecati sint? Ullam rerum consectetur quam placeat, incidunt, eos inventore laboriosam corporis illo nostrum dolore provident. Corrupti eum iusto animi? Odio, dolores provident. Facere, sequi! Facere minima eos voluptatem architecto.",
+      info: [
+        { label: "Organizing People", value: 4 },
+        { label: "Organizing People", value: 4 },
+        { label: "Organizing People", value: 4 },
+        { label: "Organizing People", value: 4 },
+      ],
+    },
+  ];
 
   return (
     <>
       <section className="section | event_section">
-
         <h1 className="title">Events</h1>
-
         <div className="flex-center | event_container">
-
-          <div className="flex-center | event_content">
-            <img className="eventImg" src={workshopEventImg} alt="reactjs workshop" />
-            <div className="event_right-content">
-              <h2>ReactJS Workshop</h2>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores architecto similique autem maxime qui quod saepe id, harum beatae quos rerum itaque cumque maiores voluptatibus sint quas sunt cupiditate dolor, deleniti, porro repellat. Reprehenderit recusandae inventore, ducimus obcaecati voluptatum molestias labore sit cumque a at accusamus autem? Ipsa, aut veniam.</p>
-              <button className="event_btn">Know More</button>
+          {eventsData.map((event, index) => (
+            <div className="flex-center | event_content" key={index}>
+              <img className="eventImg" src={event.imgSrc} alt={event.title} />
+              <div className="event_right-content">
+                <h2>{event.title}</h2>
+                <p>{event.description}</p>
+                <button onClick={() => toggleModal(event)} type="button" className="event_btn">
+                  Know More
+                </button>
+              </div>
             </div>
-          </div>
-
-          <div className="flex-center | event_content">
-            <img className="eventImg" src={azureEventImg} alt="cloud skillchallenge" />
-            <div className="event_right-content">
-              <h2>Fudamentally Azure Cloud Skill Challenge</h2>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, eligendi alias fugit maiores beatae quo est labore nemo sit corporis, recusandae nobis nam, quasi nostrum ipsam incidunt fuga eum. Hic eligendi exercitationem quo iure ipsam nam, architecto itaque et repellendus officiis impedit a culpa voluptates ad pariatur maxime ex sunt?</p>
-              <button className="event_btn">Know More</button>
-            </div>
-          </div>
-
+          ))}
         </div>
-
       </section>
+      {isModalOpen && <Modal event={selectedEvent} onRequestClose={() => setModalIsOpen(false)} />}
       <Project />
     </>
-
-  )
+  );
 };
 
 export default Events;
