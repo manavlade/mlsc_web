@@ -17,7 +17,7 @@ const Events = () => {
     {
       title: "ReactJS Workshop",
       imgSrc: workshopEventImg,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quibusdam labore. Quod provident beatae sed voluptate, quas mollitia doloremque consequuntur obcaecati sint? Ullam rerum consectetur quam placeat, incidunt, eos inventore laboriosam corporis illo nostrum dolore provident. Corrupti eum iusto animi? Odio, dolores provident. Facere, sequi! Facere minima eos voluptatem architecto.",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aliquid, explicabo excepturi laborum recusandae repellat labore nemo quis fugit. Omnis voluptatum molestias corporis, ut totam alias. Saepe quibusdam inventore itaque sequi labore illum culpa modi distinctio harum similique, quidem ipsam ab id ut dolores molestiae. Nobis maxime unde esse vel.",
       info: [
         { label: "Organizing People", value: 4 },
         { label: "Organizing People", value: 4 },
@@ -28,7 +28,7 @@ const Events = () => {
     {
       title: "Fundamentally Azure Cloud Skill Challenge",
       imgSrc: azureEventImg,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quibusdam labore. Quod provident beatae sed voluptate, quas mollitia doloremque consequuntur obcaecati sint? Ullam rerum consectetur quam placeat, incidunt, eos inventore laboriosam corporis illo nostrum dolore provident. Corrupti eum iusto animi? Odio, dolores provident. Facere, sequi! Facere minima eos voluptatem architecto.",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aliquid, explicabo excepturi laborum recusandae repellat labore nemo quis fugit. Omnis voluptatum molestias corporis, ut totam alias. Saepe quibusdam inventore itaque sequi labore illum culpa modi distinctio harum similique, quidem ipsam ab id ut dolores molestiae. Nobis maxime unde esse vel.",
       info: [
         { label: "Organizing People", value: 4 },
         { label: "Organizing People", value: 4 },
@@ -56,6 +56,7 @@ const Events = () => {
             </div>
           ))}
         </div>
+
       </section>
       {isModalOpen && <Modal event={selectedEvent} onRequestClose={() => setModalIsOpen(false)} />}
       <Project />

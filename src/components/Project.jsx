@@ -16,7 +16,7 @@ const Project = () => {
         gsap.registerPlugin(ScrollTrigger);
 
         ScrollTrigger.create({
-            trigger: ".gallery",
+            trigger: ".left",
             start: "top top",
             end: "bottom bottom",
             pin: ".right",
