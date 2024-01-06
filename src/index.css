@@ -228,14 +228,6 @@ h1>span {
     }
 }
 
-/* TEAM*/
-
-.team {
-    text-align: center;
-    color: rgb(255, 255, 255);
-    padding: 10em;
-}
-
 /* EVENTS */
 
 .event_section {
@@ -579,4 +571,230 @@ h1>span {
     padding: 0 1em;
     font-size: small;
     font-weight: 600;
+}
+
+/* Teams Section */
+.leads {
+    margin-top: 40px;
+    margin-left: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+}
+
+.lead {
+    margin-left: 25px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+}
+
+.lead2 {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+}
+
+.teams {
+    display: flex;
+    gap: 8rem;
+}
+
+.left-fixed {
+    position: sticky;
+    top: 18%;
+    padding-top: 100px;
+    height: 80vh;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.right-fixed {
+    position: relative;
+    left: 225px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+}
+
+.team-head {
+    padding-top: 100px;
+    color: white;
+    text-align: center;
+}
+
+#left-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 40px;
+}
+
+#right-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 40px;
+}
+
+#lead::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 40px;
+}
+
+#left-animation {
+    opacity: 0;
+    transition: opacity 2s;
+    margin-top: 50px;
+    height: 31rem;
+    padding-top: 0px;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#left-animation.visible {
+    animation: slideInFromLeft 3s ease-out;
+    opacity: 1;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#right-animation {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+#right-animation.Visible {
+    animation: slideInFromRight 3s ease-in-out;
+    opacity: 1;
+}
+
+.Right-animation {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.Right-animation.Visible {
+    animation: slideInFromRight 3s ease-in-out;
+    opacity: 1;
+}
+
+.left-fixed.Card.Img {
+    border-radius: 40px;
+}
+
+/* Corporate section */
+
+.cleads {
+    display: flex;
+    margin-left: 65px;
+    gap: 5rem;
+}
+
+.Cleft-fixed {
+    position: sticky;
+    margin-top: 80px;
+    top: 18%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Ccenter-fixed {
+    position: relative;
+    left: 135px;
+    margin-bottom: 50px;
+    margin-top: 80px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+}
+
+.Cright-fixed {
+    position: sticky;
+    margin-top: 80px;
+    top: 18%;
+    margin-left: 205px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Cleft-fixed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 40px;
+}
+
+.Ccenter-fixed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 40px;
+}
+
+.Cright-fixed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 40px;
+}
+
+#Cleft-animation {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#Cleft-animation.Cvisible {
+    animation: slideInFromLeft 3s ease-in-out;
+    opacity: 1;
 }

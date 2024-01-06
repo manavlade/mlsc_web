@@ -1,9 +1,19 @@
-const Team = () => {
+import React from 'react'
+import Leads from '../SubTeams/Leads'
+import Web from '../SubTeams/Web'
+import Corporate from '../SubTeams/Corporate'
+import AIML from '../SubTeams/AIML'
+import Outreach from '../SubTeams/Outreach'
+import Android from '../SubTeams/Android'
+export default function Team() {
   return (
-    <div className="team-section">
-      <h1 className="title">Team</h1>
-    </div>
+    <>
+    <Leads/>
+    <Web/>
+    <AIML/>
+    <Android/>
+    <Corporate/>
+    <Outreach/>
+    </>
   )
 }
-
-export default Team

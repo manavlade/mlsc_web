@@ -3,7 +3,6 @@ import Modal from "./Modal";
 import Project from "./Project";
 import workshopEventImg from "../assets/reactjsworkshop.jpeg";
 import azureEventImg from "../assets/azurechallenge.jpeg";
-import React from "react";
 
 const Events = () => {
   const [isModalOpen, setModalIsOpen] = useState(false);
